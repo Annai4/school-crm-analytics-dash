@@ -120,10 +120,10 @@ numeric IDs.
 
 ## 📸 Preview
 **Intro**
-![Intro tab](screenshot.png)
+![Intro tab](screenshot.jpg)
 
 **Data Hygiene** — completeness audit across all source columns
-![Data Hygiene tab](screenshot2.png)
+![Data Hygiene tab](screenshot2.jpg)
 
 **Time Dynamics** — deal volume vs. calling activity over time
-![Time Dynamics tab](screenshot3.png)
+![Time Dynamics tab](screenshot3.jpg)
