@@ -5,6 +5,9 @@ import numpy as np
 from styles import BRAND_COLORS # Імпортуємо твої кольори
 
 def render_campaign_tab(finalizer):
+    print("DEBUG source unique (d1):", finalizer.d1['source'].unique(), flush=True)
+    print("DEBUG source unique (d2):", finalizer.d2['source'].unique(), flush=True)
+
     paid_deals = finalizer.d1[finalizer.d1["stage"] == 'payment_done'].copy()
     df_revenue = paid_deals.groupby('source')['initial_amount_paid'].sum().reset_index(name="revenue")
     df_leads = finalizer.d1.groupby('source').size().reset_index(name='leads_count')
