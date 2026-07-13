@@ -37,6 +37,7 @@ finalizer_clean = DataFinalizer(clean_tables, clean_tables)
 raw_data_counts = {'Deals': len(d1_raw), 'Contacts': len(d4_raw)}
 
 app = Dash(__name__)
+server = app.server  # needed for deployment (gunicorn)
 
 app.layout = html.Div([  
     html.Div([
@@ -123,5 +124,6 @@ def switch_tab(prev_clicks, next_clicks, current_tab):
 
 
 if __name__ == '__main__':
-   
-    app.run(debug=True, port=8051)
+    import os
+    port = int(os.environ.get('PORT', 8051))
+    app.run(debug=False, host='0.0.0.0', port=port)
