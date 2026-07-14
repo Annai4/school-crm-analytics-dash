@@ -8,7 +8,7 @@ def standardize_df(df):
     df = df.copy()
     for col in df.columns:
         
-        if df[col].dtype == 'object' or pd.api.types.is_string_dtype(df[col]):
+        if not pd.api.types.is_numeric_dtype(df[col]) and not pd.api.types.is_datetime64_any_dtype(df[col]):
             df[col] = (
                 df[col]
                 .astype(str)
