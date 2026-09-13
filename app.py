@@ -5,7 +5,7 @@ from dash import Dash, html, dcc, Input, Output, callback, State, ctx
 from finalizernew import DataFinalizer
 from data_hygiene import render_hygiene_tab
 from descriptive_stats import render_stats_tab
-#from data_utils import apply_standardization
+from data_utils import apply_standardization
 from time_analysis import render_time_tab
 from campaign_analysis import render_campaign_tab
 from team_analysis import render_team_tab
