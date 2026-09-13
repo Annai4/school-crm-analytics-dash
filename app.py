@@ -34,6 +34,9 @@ clean_tables = {'d1': d1_clean, 'd2': d2_clean, 'd3': d3_clean, 'd4': d4_clean}
 finalizer = DataFinalizer(raw_tables, clean_tables)
 finalizer_clean = DataFinalizer(clean_tables, clean_tables)
 
+finalizer = apply_standardization(finalizer)
+finalizer_clean = apply_standardization(finalizer_clean)
+
 raw_data_counts = {'Deals': len(d1_raw), 'Contacts': len(d4_raw)}
 
 app = Dash(__name__)
