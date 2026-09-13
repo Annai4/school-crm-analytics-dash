@@ -1,4 +1,5 @@
 import pandas as pd
+pd.options.mode.chained_assignment = None
 import plotly.express as px
 import plotly.graph_objects as go
 from dash import Dash, html, dcc, Input, Output, callback, State, ctx
